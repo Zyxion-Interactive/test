@@ -4,30 +4,71 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About | Studio Insane</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="progress"></div>
-<canvas id="particles"></canvas>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
 
-<nav>
-  <h2>STUDIO</h2>
-  <ul>
-    <li><a href="home.html">Home</a></li>
-    <li><a href="experiences.html">Experiences</a></li>
-    <li><a href="team.html">Team</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="support.html">Support</a></li>
-  </ul>
-</nav>
+body{
+  margin:0;
+  padding:0;
+  background:#050505;
+  font-family:'Orbitron', sans-serif;
+  color:white;
+  overflow-x:hidden;
+}
+#particles{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  pointer-events:none;
+}
 
-<section class="section">
-  <h2>About Us</h2>
-  <div class="card">
-    <p>We build premium cinematic digital experiences. Performance-driven. Community-focused. Immersive by design.</p>
-  </div>
-</section>
 
-<script src="script.js"></script>
-</body>
-</html>
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+  z-index:10;
+}
+nav h2{
+  color:white;
+}
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+nav ul li a{
+  color:white;
+  text-decoration:none;
+  transition:.3s;
+}
+nav ul li a:hover{
+  color:#ff007f;
+}
+
+
+.hero{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:150px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  pointer-events:none;
+  z-index:5;
+}
+.hero h1{
+  font-size:3rem;
+  background:

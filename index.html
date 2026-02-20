@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-/* Hero sectie */
+
 .hero {
   position: relative;
   width: 100%;
@@ -37,7 +37,7 @@
   margin-top: 10px;
 }
 
-/* Dynamic release block */
+  
 .dynamic-block {
   width: 90%;
   max-width: 1000px;
@@ -93,7 +93,7 @@
   box-shadow: 0 40px 120px rgba(255,0,127,.6), 0 40px 120px rgba(0,212,255,.4);
 }
 
-/* Grid / Cards */
+  
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -120,7 +120,7 @@
   box-shadow: 0 40px 100px rgba(255,0,127,.6),0 40px 100px rgba(0,212,255,.4);
 }
 
-/* SMP tile */
+
 .smp-image{
   width:100%;
   border-radius:15px;
@@ -138,7 +138,7 @@
   transform: scale(1.05);
 }
 
-/* Particles full-page */
+
 #particles{
   position:absolute;
   top:0;
@@ -149,7 +149,7 @@
   z-index:0;
 }
 
-/* Responsive */
+
 @media (max-width:768px){
   .hero h1{ font-size:2rem; }
   .hero p{ font-size:1rem; }
@@ -173,13 +173,13 @@
   </ul>
 </nav>
 
-<!-- Hero -->
+
 <section class="hero">
   <h1>XYNOX STUDIOS</h1>
   <p>ULTRA CINEMATIC DIGITAL EXPERIENCES</p>
 </section>
 
-<!-- Dynamic Release Block -->
+
 <section class="dynamic-block" id="dynamicRelease">
   <img src="https://raw.githubusercontent.com/ikstokie1/ikstokie1.github.io/refs/heads/main/files/xynox%20studios/Designer.png" alt="Release Image">
   <h2>InsaneSMP</h2>
@@ -187,14 +187,13 @@
 </section>
 
 <script>
-// Dynamic release block click + optional cycling
+
 const releases = [
   {
     img: "https://raw.githubusercontent.com/ikstokie1/ikstokie1.github.io/refs/heads/main/files/xynox%20studios/Designer.png",
     title: "InsaneSMP",
     desc: "Step into the Nether portal!",
-    link: "https://insanesmp.xynoxstudios.com" // <-- Zorg dat dit de echte link is
-  }
+    link: "https://xynoxstudios.com/InsaneSMP" 
 ];
 
 const dynamicBlock = document.getElementById("dynamicRelease");
@@ -223,10 +222,10 @@ function updateRelease() {
   current = (current + 1) % releases.length;
 }
 
-// Optioneel: auto-cycling elke 20 seconden
+
 setInterval(updateRelease, 20000);
 
-// Klik actie: ga naar link
+
 dynamicBlock.addEventListener("click", () => {
   const release = releases[(current + releases.length - 1) % releases.length];
   if (release.link && release.link !== "#") {
@@ -236,7 +235,7 @@ dynamicBlock.addEventListener("click", () => {
 </script>
 
 
-<!-- SMP Grid -->
+
 <section class="section">
   <div class="grid">
     <a href="https://xynoxstudios.com/InsaneSMP" target="_blank" class="card smp-tile">
@@ -250,7 +249,7 @@ dynamicBlock.addEventListener("click", () => {
 </section>
 
 <script>
-// Particles
+
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 function resizeCanvas(){ canvas.width = window.innerWidth; canvas.height = document.body.scrollHeight; }
@@ -277,7 +276,7 @@ function animateParticles(){
 }
 animateParticles();
 
-// Dynamic release (can cycle multiple releases)
+
 const releases=[{img:"https://via.placeholder.com/1000x350.png?text=InsaneSMP", title:"InsaneSMP", desc:"Step into the Nether portal!", link:"#"}];
 const dynamicBlock=document.getElementById("dynamicRelease");
 let current=0;
